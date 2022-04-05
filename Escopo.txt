@@ -1,0 +1,5 @@
+1. Ler arquivo TXT com os códigos de barras;
+2. Capturar o valor desses códigos (Posição 17 a 31);
+3. Calcule o juros em caso de atraso e desconto em caso de antecipação 
+(3% de juros e 5% de desconto com 5 dias de antecêdencia ou atraso, validar data das posições 33 e 34);
+4. Escrever em um arquivo TXT o valor total, o desconto, o juros e se foi pago antes ou depois da data para cada código de barras.

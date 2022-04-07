@@ -42,7 +42,9 @@ export class FileManegement
                  barCodeStatus.push(message);
              }
          }
-         )}
+         )
+        return this.filesWrite(barCodeStatus);
+        }
 
          static calculateValues(fullPrice){
              let newValues={
@@ -52,12 +54,16 @@ export class FileManegement
              return newValues
          }
 
-         static writeDocs(barCodeStatus){
-             let codes = barCodeStatus.join('==================================================================================\r\n');
-             const newFile = './src/Model/Files/messages.txt';
-             writeFile(newFile,codes, (err)=>{
-                 err ? console.error(err) : console.log(`Arquivo gerado com sucesso!`);
-             })
-         }
-         
+        static filesWrite(barCodeStatus){
+            let data = barCodeStatus.join("\r\n");
+            writeFile("tickets.txt", data,(err)=> {
+                if(err){
+                    console.error(err) 
+                }else{
+                    console.log("File written successfully\n");
+                }
+            }
+            
+
+            )}
 }

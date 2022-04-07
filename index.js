@@ -1,7 +1,5 @@
-import {readFile} from "fs"
+import {readFile, writeFile} from "fs"
 import { FileManegement } from "./FileManegement.js"
-
-const barCodesFile = '.src/model/BarCodes/barcodes.txt'
 
 const file = "codbarras.txt"
 const encode = "UTF-8"
